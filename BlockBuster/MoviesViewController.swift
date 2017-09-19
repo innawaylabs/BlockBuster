@@ -8,9 +8,11 @@
 
 import UIKit
 import AFNetworking
+import MBProgressHUD
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var networkErrorView: UIView!
     @IBOutlet weak var moviesTableView: UITableView!
     
     var movies: [NSDictionary]?
@@ -21,6 +23,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         self.moviesTableView.dataSource = self
         self.moviesTableView.delegate = self
         
+        // Initialize a UIRefreshControl
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        moviesTableView.insertSubview(refreshControl, at: 0)
+        
+        refreshControlAction(refreshControl)
+    }
+
+    // Makes a network request to get updated data
+    // Updates the tableView with the new data
+    // Hides the RefreshControl
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
         let url = URL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")
         let request = URLRequest(url: url!)
         let session = URLSession(
@@ -29,20 +43,28 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             delegateQueue:OperationQueue.main
         )
         
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         let task: URLSessionDataTask = session.dataTask(
             with: request as URLRequest,
             completionHandler: { (data, response, error) in
+                // Hide HUD once the network request comes back (must be done on main UI thread)
+                MBProgressHUD.hide(for: self.view, animated: true)
+                
                 if let data = data {
+                    self.networkErrorView.isHidden = true
                     if let responseDictionary = try! JSONSerialization.jsonObject(
                         with: data, options:[]) as? NSDictionary {
                         self.movies = (responseDictionary["results"] as! [NSDictionary])
                         self.moviesTableView.reloadData()
+                        refreshControl.endRefreshing()
                     }
+                } else {
+                    self.networkErrorView.isHidden = false
                 }
         });
         task.resume()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -61,14 +83,17 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let movie = movies![indexPath.row]
         let title = movie["title"] as! String
         let overview = movie["overview"] as! String
-        let posterPath = movie["poster_path"] as! String
-        let baseUrl = "https://image.tmdb.org/t/p/w500"
-        
-        let imageUrl = NSURL(string: baseUrl + posterPath)
         
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
-        cell.posterImageView.setImageWith(imageUrl as! URL)
+
+        if let posterPath = movie["poster_path"] as? String {
+            let baseUrl = "https://image.tmdb.org/t/p/w500"
+            let imageUrl = NSURL(string: baseUrl + posterPath)
+            cell.posterImageView.setImageWith(imageUrl as! URL)
+        } else {
+            cell.posterImageView = nil
+        }
         
         return cell
     }
