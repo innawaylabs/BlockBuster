@@ -1,8 +1,8 @@
-# Project 1 - *Box Office*
+# **Block Buster Movies App**
 
-**Box Office** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**Box Office** is your favorite movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
@@ -41,8 +41,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-(Describe any challenges encountered while building the app.)
-
+* Couldn't submit this on time because of a busy week topped by TechCrunch Disrupt Hackathon over the weekend.
+* Since I was facing random issues, I had to step back and try to **really** understand things instead of just blindly following the video walkthroughs.
 
 ## License
 
