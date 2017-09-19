@@ -15,6 +15,7 @@
 		EFAFCD5E1F708D8000B598F5 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD5D1F708D8000B598F5 /* MovieCell.swift */; };
 		EFAFCD601F708DD400B598F5 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD5F1F708DD400B598F5 /* MoviesTableViewController.swift */; };
 		EFAFCD621F709BED00B598F5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD611F709BED00B598F5 /* MoviesViewController.swift */; };
+		EFAFCD661F70AB4300B598F5 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD651F70AB4300B598F5 /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EFAFCD5D1F708D8000B598F5 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		EFAFCD5F1F708DD400B598F5 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		EFAFCD611F709BED00B598F5 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		EFAFCD651F70AB4300B598F5 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		EFAFCD641F70A3FE00B598F5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFAFCD651F70AB4300B598F5 /* MovieDetailsViewController.swift */,
 				EFAFCD611F709BED00B598F5 /* MoviesViewController.swift */,
 				EFAFCD5F1F708DD400B598F5 /* MoviesTableViewController.swift */,
 			);
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAFCD661F70AB4300B598F5 /* MovieDetailsViewController.swift in Sources */,
 				EFAFCD601F708DD400B598F5 /* MoviesTableViewController.swift in Sources */,
 				EFAFCD4C1F708BCC00B598F5 /* AppDelegate.swift in Sources */,
 				EFAFCD5E1F708D8000B598F5 /* MovieCell.swift in Sources */,
