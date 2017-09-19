@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1DDF262C64190775E77E37 /* Pods_BlockBuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4D74CFAF79F82C16511EDC /* Pods_BlockBuster.framework */; };
 		EFAFCD4C1F708BCC00B598F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD4B1F708BCC00B598F5 /* AppDelegate.swift */; };
-		EFAFCD4E1F708BCC00B598F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD4D1F708BCC00B598F5 /* ViewController.swift */; };
 		EFAFCD511F708BCC00B598F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAFCD4F1F708BCC00B598F5 /* Main.storyboard */; };
 		EFAFCD531F708BCC00B598F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAFCD521F708BCC00B598F5 /* Assets.xcassets */; };
 		EFAFCD561F708BCC00B598F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAFCD541F708BCC00B598F5 /* LaunchScreen.storyboard */; };
+		EFAFCD5E1F708D8000B598F5 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD5D1F708D8000B598F5 /* MovieCell.swift */; };
+		EFAFCD601F708DD400B598F5 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD5F1F708DD400B598F5 /* MoviesTableViewController.swift */; };
+		EFAFCD621F709BED00B598F5 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFCD611F709BED00B598F5 /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0772C3EB178C082B43FBF362 /* Pods-BlockBuster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBuster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlockBuster/Pods-BlockBuster.debug.xcconfig"; sourceTree = "<group>"; };
+		3E4D74CFAF79F82C16511EDC /* Pods_BlockBuster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockBuster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF49E712A5618EC4631EFDD6 /* Pods-BlockBuster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBuster.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlockBuster/Pods-BlockBuster.release.xcconfig"; sourceTree = "<group>"; };
 		EFAFCD481F708BCC00B598F5 /* BlockBuster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockBuster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAFCD4B1F708BCC00B598F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFAFCD4D1F708BCC00B598F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFAFCD501F708BCC00B598F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFAFCD521F708BCC00B598F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFAFCD551F708BCC00B598F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFAFCD571F708BCC00B598F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFAFCD5D1F708D8000B598F5 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		EFAFCD5F1F708DD400B598F5 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		EFAFCD611F709BED00B598F5 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1DDF262C64190775E77E37 /* Pods_BlockBuster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EC58BE24C3B9C027030B6A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E4D74CFAF79F82C16511EDC /* Pods_BlockBuster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD51968C72CB482DF5EA3BAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0772C3EB178C082B43FBF362 /* Pods-BlockBuster.debug.xcconfig */,
+				AF49E712A5618EC4631EFDD6 /* Pods-BlockBuster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EFAFCD3F1F708BCB00B598F5 = {
 			isa = PBXGroup;
 			children = (
 				EFAFCD4A1F708BCC00B598F5 /* BlockBuster */,
 				EFAFCD491F708BCC00B598F5 /* Products */,
+				BD51968C72CB482DF5EA3BAA /* Pods */,
+				3EC58BE24C3B9C027030B6A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +82,32 @@
 		EFAFCD4A1F708BCC00B598F5 /* BlockBuster */ = {
 			isa = PBXGroup;
 			children = (
+				EFAFCD641F70A3FE00B598F5 /* View Controllers */,
+				EFAFCD631F70A3F800B598F5 /* Views */,
 				EFAFCD4B1F708BCC00B598F5 /* AppDelegate.swift */,
-				EFAFCD4D1F708BCC00B598F5 /* ViewController.swift */,
 				EFAFCD4F1F708BCC00B598F5 /* Main.storyboard */,
 				EFAFCD521F708BCC00B598F5 /* Assets.xcassets */,
 				EFAFCD541F708BCC00B598F5 /* LaunchScreen.storyboard */,
 				EFAFCD571F708BCC00B598F5 /* Info.plist */,
 			);
 			path = BlockBuster;
+			sourceTree = "<group>";
+		};
+		EFAFCD631F70A3F800B598F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFAFCD5D1F708D8000B598F5 /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EFAFCD641F70A3FE00B598F5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFAFCD611F709BED00B598F5 /* MoviesViewController.swift */,
+				EFAFCD5F1F708DD400B598F5 /* MoviesTableViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFAFCD5A1F708BCC00B598F5 /* Build configuration list for PBXNativeTarget "BlockBuster" */;
 			buildPhases = (
+				4B1F66C3856158717CAFDB2E /* [CP] Check Pods Manifest.lock */,
 				EFAFCD441F708BCB00B598F5 /* Sources */,
 				EFAFCD451F708BCB00B598F5 /* Frameworks */,
 				EFAFCD461F708BCB00B598F5 /* Resources */,
+				7D109F54587CED3FB57C58A7 /* [CP] Embed Pods Frameworks */,
+				AAC6C7142E1BF7ED70C2734C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +180,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4B1F66C3856158717CAFDB2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockBuster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D109F54587CED3FB57C58A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BlockBuster/Pods-BlockBuster-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlockBuster/Pods-BlockBuster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAC6C7142E1BF7ED70C2734C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlockBuster/Pods-BlockBuster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFAFCD441F708BCB00B598F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFAFCD4E1F708BCC00B598F5 /* ViewController.swift in Sources */,
+				EFAFCD601F708DD400B598F5 /* MoviesTableViewController.swift in Sources */,
 				EFAFCD4C1F708BCC00B598F5 /* AppDelegate.swift in Sources */,
+				EFAFCD5E1F708D8000B598F5 /* MovieCell.swift in Sources */,
+				EFAFCD621F709BED00B598F5 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +363,7 @@
 		};
 		EFAFCD5B1F708BCC00B598F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0772C3EB178C082B43FBF362 /* Pods-BlockBuster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BlockBuster/Info.plist;
@@ -270,6 +376,7 @@
 		};
 		EFAFCD5C1F708BCC00B598F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF49E712A5618EC4631EFDD6 /* Pods-BlockBuster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BlockBuster/Info.plist;
@@ -299,6 +406,7 @@
 				EFAFCD5C1F708BCC00B598F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
